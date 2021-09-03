@@ -18,7 +18,7 @@ namespace Azure_ServiceBus_MsgReceiver.Models
                 Message = que.Message
             };
            
-
+            //
             //Code for Adding Message in Queue
 
             //S1: The NamespaceManager object used to manage queues, topics etc.

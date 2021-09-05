@@ -1,0 +1,38 @@
+﻿@model Azure_ServiceBus_MsgReceiver.Models.Queue
+
+@{
+    ViewBag.Title = "ServiceBus";
+}
+
+<h2>Queue Receiver</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <h3>To process the Message </h3>  <input type="submit" value="Click Here!" onclick="Rec()" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+
+@Html.Label("Message")
+<p> Count:@ViewBag.Count</p>
+<p> Message:@ViewBag.Message</p>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        function Rec() {
+            //alert("Message Processed!!!");
+        }
+    </script>
+}
+

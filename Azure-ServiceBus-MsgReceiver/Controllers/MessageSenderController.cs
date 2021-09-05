@@ -13,14 +13,13 @@ namespace Azure_ServiceBus_MsgReceiver.Controllers
 
         public MessageSenderController()
         {
-            obj = new Sender();
+          obj = new Sender();
         }
 
         // GET: OrderManager
         public ActionResult Index()
         {
-
-            return View();
+            return View("Index");
         }
 
 
@@ -28,8 +27,7 @@ namespace Azure_ServiceBus_MsgReceiver.Controllers
         public ActionResult Index(Queue c)
         {
             obj.CreateOrder(c);
-            ModelState.Clear();
-            return View(c);
+            return View("Index");
         }
        
     }
